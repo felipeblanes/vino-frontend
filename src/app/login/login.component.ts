@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
     console.log(this.usuario.autenticacao);
     console.log(this.usuario.nome);
 
-    if(this.usuario.nome == ''){
+    if(this.usuario.nome.length < 5){
       this.mensagemErro = true;
       this.mensagem = 'Por favor, insira o seu nome completo.';
     } else if(this.usuario.senha == ''){
