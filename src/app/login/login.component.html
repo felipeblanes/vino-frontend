@@ -29,9 +29,11 @@
 
 
     <div id="grupoBotao">
-      <button type="submit" class="btn btn-primary btn-login" (click)="fazerLogin(inputNome, inputSenha)">Login</button>
+      <button type="button" class="btn btn-primary btn-login" (click)="fazerLogin(inputNome, inputSenha)">Login</button>
     </div>
 
 </form>
 
-
+<div id="login" *ngIf="mensagemErro">
+    <p>{{mensagem}}</p>
+</div>
