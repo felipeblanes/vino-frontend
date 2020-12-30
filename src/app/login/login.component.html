@@ -1,9 +1,11 @@
 <!--Página inicial para login-->
 
 <!--Formulario de login copiado do bootstrap (http://getbootstrap.com/docs/4.0/components/forms/)-->
-<h1>Vino Vídeos</h1>
+
+<!--h1>Vino Vídeos</h1>-->
 
 <form>
+  <img class="logo" src="../../assets/images/vino_logo2.png">
     <div class="input-group mb-3 inputLogin">
         <div class="input-group-prepend">
           <span class="input-group-text" id="basic-addon1" >
@@ -27,13 +29,12 @@
         <input #inputSenha type="password" class="form-control" placeholder="Senha do Evento" >
       </div>
 
+      <div *ngIf="mensagemErro">
+        <p class="alerta">{{mensagem}}</p>
+      </div>
 
     <div id="grupoBotao">
-      <button type="button" class="btn btn-primary btn-login" (click)="fazerLogin(inputNome, inputSenha)">Login</button>
+      <button type="button" class="btn btn-login" (click)="fazerLogin(inputNome, inputSenha)">Entrar</button>
     </div>
 
 </form>
-
-<div *ngIf="mensagemErro">
-    <p>{{mensagem}}</p>
-</div>
